@@ -1,0 +1,253 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+
+
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+.container {
+
+   margin: 0 auto;
+   max-width: 1400px;
+   width: 100%;
+   max-height: 800px;
+   padding: 120px 140px 161px 140px;
+
+   .header {
+      display: flex;
+      justify-content: space-between;
+      height: 60px;
+      width: 100%;
+      max-width: 1160px;
+
+      .actual {
+         font-size: 50px;
+         font-weight: 700;
+         color: #527CCD;
+      }
+
+      .buttons {
+         display: flex;
+         margin: auto 0;
+
+         .button__left {
+            margin-left: 40px;
+            display: block;
+
+         }
+
+         .button__right {
+            margin-left: 40px;
+            // background-image: url(/images/left1.jpg);
+         }
+
+         .right__arrow {
+            // background-image: url(./images/right.jpg);
+         }
+
+         img.left:hover {
+            // background-image: url(/images/left-hover.svg);
+         }
+      }
+
+      .indicator {
+         width: 320px;
+         height: 1px;
+         position: relative;
+         border: 1px solid #C8D9FB;
+         margin: auto auto;
+         position: relative;
+      }
+
+
+
+      .indicator:before {
+         content: '';
+         display: block;
+         width: 25%;
+         height: 2px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         background-color: #527CCD;
+      }
+   }
+
+   .content {
+      margin: 0 auto;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1160px;
+
+      .card {
+         width: 25%;
+         border: 1px solid #C8D9FB;
+         margin-left: 40px;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .card:first-child {
+         margin: 0;
+      }
+
+      .card__preveiw {
+         max-width: 220px;
+         max-height: 160px;
+         margin: 20px;
+
+         .placeholder {
+            width: 100%;
+            max-width: 220px;
+            height: 100%;
+            max-height: 160px;
+         }
+      }
+
+      .card__preview__data {
+         margin-bottom: 20px;
+         margin-left: 20px;
+      }
+
+      .card__text__content {
+         margin-left: 20px;
+         font-size: 12px;
+         font-weight: 400px;
+         padding-bottom: 15px;
+         color: #527CCD;
+         line-height: 22px;
+      }
+
+      .card__header {
+         margin-left: 20px;
+         margin-bottom: 15px;
+         font-size: 16px;
+         line-height: 26px;
+         color: #527CCD;
+      }
+
+   }
+}
+
+.mob__container {
+   display: none;
+   margin: 100px auto;
+   max-width: 320px;
+   max-height: 800px;
+   width: 100%;
+   max-height: 800px;
+   padding: 50px 0 87px;
+   border: 1px solid #C8D9FB;
+   overflow: hidden;
+
+
+   .mob__cardLine {
+      scroll-snap-type: y mandatory;
+      display: -webkit-box;
+      position: relative;
+      left: 0;
+      transition: all ease 1s;
+      transform: translateX(0);
+      // transition: transform 0.3s ease-in-out;
+      cursor: grab;
+   }
+
+   .mob__actual {
+      color: #527CCD;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      margin-left: 15px;
+      margin-bottom: 50px;
+   }
+
+   .mob__card {
+      scroll-snap-align: start;
+      margin: 0 10px 20px 15px;
+      max-width: 280px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border: 1px solid #CCDDFF;
+
+      .mob__preview {
+         margin-bottom: 15px;
+
+         .mob__placeholder {
+            max-width: 240px;
+            width: 100%;
+         }
+      }
+
+      .mob__preview__data {
+         margin-bottom: 13px;
+      }
+
+      .mob__header {
+         margin-bottom: 21px;
+      }
+   }
+
+   .mob__buttons {
+
+      display: flex;
+      justify-content: space-between;
+      width: 280px;
+      margin: 15px 15px;
+
+      .mob__progress__bar {
+         width: 130px;
+         height: 1px;
+         position: relative;
+         border: 1px solid #C8D9FB;
+         margin: auto auto;
+         position: relative;
+      }
+
+      .mob__progress__bar:before {
+         content: '';
+         display: block;
+         width: 25%;
+         height: 2px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         background-color: #527CCD;
+      }
+
+      .mob__left__arrow {
+         cursor: pointer;
+      }
+
+      .mob__right__arrow {
+         cursor: pointer;
+      }
+   }
+}
+
+
+
+@media (max-width:600px) {
+   .mob__container {
+      display: block;
+      left: -400px;
+   }
+
+   .container {
+      display: none;
+   }
+}
